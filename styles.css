@@ -1,0 +1,56 @@
+body {
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 80px auto 60px;
+    grid-template-areas: 
+    "nav head"
+    "nav main"
+    "footer footer";
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: linear-gradient(-45deg, rgb(11, 6, 83), rgb(75, 18, 182), rgb(22, 109, 109) 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.headtitle {
+    grid-area: head;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 20px;
+    border-bottom: 5px solid black;
+}
+
+.navmenu {
+    grid-area: nav;
+    display: flex;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+}
+
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+

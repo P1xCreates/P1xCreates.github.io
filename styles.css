@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template-columns: 90px auto;
+    grid-template-columns: 150px auto;
     grid-template-rows: 80px auto 60px;
     grid-template-areas: 
     "nav head"
@@ -11,7 +11,7 @@ body {
     min-height: 100dvh;
     background: linear-gradient(-45deg, rgb(11, 6, 83), rgb(75, 18, 182), rgb(22, 109, 109) 100%);
     background-size: 200% 200%;
-    animation: gradientShift 5s ease-in-out infinite;
+    animation: gradientShift 10s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
@@ -26,31 +26,62 @@ body {
     }
 }
 
-.headtitle {
+.headtitle header {
     grid-area: head;
+    position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center; 
     align-items: center; 
     gap: 10px; 
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
     border-bottom: 5px solid black;
 }
 
 .navmenu {
     grid-area: nav;
     display: flex;
+    background: rgb(20, 3, 58);
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 main {
     grid-area: main;
     display: flex;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    justify-content: center;
 }
 
 
 footer {
     grid-area: footer;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0px;
+    border: 2px solid black;
 }
 
+.panels {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1000px;
+    gap: 50px;
+}
+div {
+    display: block;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    height: 300px;
+
+}
